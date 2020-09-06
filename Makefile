@@ -5,3 +5,6 @@ check:
 	repoman manifest
 	repoman -dx full
 	git status
+
+python_compat:
+	grep -r ^PYTHON_COMPAT=
