@@ -3,8 +3,7 @@
 
 EAPI=7
 
-# missing for 3.8 : dev-python/nodeenv
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 
 inherit distutils-r1
 
