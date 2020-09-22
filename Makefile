@@ -1,3 +1,5 @@
+.SILENT:
+
 check:
 	find . -iname manifest -delete
 	find . -type d -exec chmod 0755 {} \;
@@ -7,4 +9,7 @@ check:
 	git status
 
 python_compat:
-	grep -r ^PYTHON_COMPAT=
+	grep --color=always -r ^PYTHON_COMPAT=
+
+python_usedep:
+	grep --color=always -r dev-python/ * | grep -v PYTHON_USEDEP
