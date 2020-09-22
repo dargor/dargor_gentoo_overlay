@@ -17,5 +17,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/flake8
+	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
 "
