@@ -20,7 +20,7 @@ RESTRICT="test"
 # erlang: cf release notes
 # elixir: cf rabbitmq-server-${PV}/deps/rabbitmq_cli/mix.exs
 
-RDEPEND=">=dev-lang/erlang-21.3[ssl]
+RDEPEND=">=dev-lang/erlang-22.0[ssl]
 	<dev-lang/erlang-23.1[ssl]"
 DEPEND="${RDEPEND}
 	app-arch/zip
