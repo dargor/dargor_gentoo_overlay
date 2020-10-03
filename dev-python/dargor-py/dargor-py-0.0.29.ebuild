@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-MY_PV="95bfa9c96a8894523923093164c8b2432036ea3b"
+MY_PV="f431e734ffaf2f8f6618bc477bd650b1b9b41413"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit distutils-r1
