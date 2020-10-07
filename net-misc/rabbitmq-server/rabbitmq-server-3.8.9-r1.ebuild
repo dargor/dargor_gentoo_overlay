@@ -3,9 +3,9 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{6..9} )
 
-inherit python-any-r1 systemd user
+inherit python-any-r1 systemd
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang"
 HOMEPAGE="https://www.rabbitmq.com/"
@@ -20,8 +20,13 @@ RESTRICT="test"
 # erlang: cf release notes
 # elixir: cf rabbitmq-server-${PV}/deps/rabbitmq_cli/mix.exs
 
-RDEPEND=">=dev-lang/erlang-22.0[ssl]
-	<dev-lang/erlang-23.1[ssl]"
+RDEPEND="
+	acct-group/rabbitmq
+	acct-user/rabbitmq
+	>=dev-lang/erlang-22.0[ssl]
+	<dev-lang/erlang-23.1[ssl]
+"
+
 DEPEND="${RDEPEND}
 	app-arch/zip
 	app-arch/unzip
@@ -32,12 +37,6 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	$(python_gen_any_dep 'dev-python/simplejson[${PYTHON_USEDEP}]')
 "
-
-pkg_setup() {
-	enewgroup rabbitmq
-	enewuser rabbitmq -1 -1 /var/lib/rabbitmq rabbitmq
-	python-any-r1_pkg_setup
-}
 
 src_compile() {
 	emake all docs dist
