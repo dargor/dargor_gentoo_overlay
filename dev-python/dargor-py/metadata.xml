@@ -5,6 +5,9 @@
     <name>Gabriel Linder</name>
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
+  <use>
+    <flag name="uvloop">Install dev-python/uvloop</flag>
+  </use>
   <upstream>
     <remote-id type="github">dargor/dargor-py</remote-id>
   </upstream>

@@ -3,7 +3,9 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+# missing for python3_9:
+#   dev-python/uvloop
+PYTHON_COMPAT=( python3_{6..8} )
 
 MY_PV="f431e734ffaf2f8f6618bc477bd650b1b9b41413"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -17,11 +19,13 @@ SRC_URI="https://github.com/dargor/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+uvloop"
 
 RDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/pandas[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
-	dev-python/uvloop[${PYTHON_USEDEP}]
+	uvloop? (
+		dev-python/uvloop[${PYTHON_USEDEP}]
+	)
 "
