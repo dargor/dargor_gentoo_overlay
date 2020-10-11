@@ -30,3 +30,9 @@ RDEPEND="
 	dev-python/toml[${PYTHON_USEDEP}]
 	>=dev-python/virtualenv-20.0.8[${PYTHON_USEDEP}]
 "
+
+python_prepare_all() {
+	distutils-r1_python_prepare_all
+	sed -e "s,f'#!/usr/bin/env {py}','#!/usr/bin/python-exec2c'," \
+		-i pre_commit/commands/install_uninstall.py || die
+}
