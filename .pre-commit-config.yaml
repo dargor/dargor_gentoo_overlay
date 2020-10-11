@@ -1,0 +1,9 @@
+# pre-commit install --hook-type prepare-commit-msg
+repos:
+  - repo: local
+    hooks:
+      - id: check-signed-off-by
+        name: Check Signed-off-by
+        entry: git-check-signed-off-by
+        language: system
+        stages: [prepare-commit-msg]
