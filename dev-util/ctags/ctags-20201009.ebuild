@@ -5,7 +5,7 @@ EAPI=7
 
 inherit autotools
 
-COMMITHASH="86bdb84ce1fc25239c02121343cec897c12b9ffa"
+COMMITHASH="952bd1e9df69e9faf02e319ea1b084984d3c36b0"
 
 DESCRIPTION="Exuberant Ctags creates tags files for code browsing in editors"
 HOMEPAGE="https://ctags.io/ https://github.com/universal-ctags/ctags"
