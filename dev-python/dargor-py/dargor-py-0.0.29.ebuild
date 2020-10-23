@@ -3,9 +3,7 @@
 
 EAPI=7
 
-# missing for python3_9:
-#   dev-python/uvloop
-PYTHON_COMPAT=( python3_{6..8} )
+PYTHON_COMPAT=( python3_{6..9} )
 
 MY_PV="f431e734ffaf2f8f6618bc477bd650b1b9b41413"
 S="${WORKDIR}/${PN}-${MY_PV}"
