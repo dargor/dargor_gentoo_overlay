@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
 if [[ ${PV} == *9999 ]] ; then
 	: ${EGIT_REPO_URI:="https://github.com/intel/media-driver"}
@@ -37,5 +37,5 @@ src_configure() {
 		-DMEDIA_RUN_TEST_SUITE=OFF
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 }
