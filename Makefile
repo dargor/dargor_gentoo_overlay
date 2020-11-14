@@ -1,12 +1,14 @@
 .SILENT:
 
 check:
+	rm -rf metadata/md5-cache/
 	find . -iname manifest -delete
 	find . -type d -exec chmod 0755 {} \;
 	find . -type f -exec chmod 0644 {} \;
 	chmod 0755 .git/hooks/prepare-commit-msg
 	repoman manifest
 	repoman -dx full
+	pkgcheck scan
 	git status
 
 hooks:

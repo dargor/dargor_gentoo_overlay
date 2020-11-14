@@ -1,0 +1,14 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=json? ( dev-libs/jansson ) xml? ( dev-libs/libxml2:2 ) yaml? ( dev-libs/libyaml ) dev-python/docutils virtual/pkgconfig
+DESCRIPTION=Exuberant Ctags creates tags files for code browsing in editors
+EAPI=7
+HOMEPAGE=https://ctags.io/ https://github.com/universal-ctags/ctags
+IUSE=json xml yaml
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=json? ( dev-libs/jansson ) xml? ( dev-libs/libxml2:2 ) yaml? ( dev-libs/libyaml ) app-eselect/eselect-ctags
+SLOT=0
+SRC_URI=https://github.com/universal-ctags/ctags/archive/4729393a8d9c5c813de53fda90f10e1cbb27cd4d.tar.gz -> ctags-20201108.tar.gz
+_eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
+_md5_=171d8d40ac5dbc55f3dcd14a2ad6227d
