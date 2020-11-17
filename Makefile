@@ -1,6 +1,14 @@
 .SILENT:
 
-check:
+all: help
+
+help: ## show targets
+	@cat $(MAKEFILE_LIST) \
+		| grep -i "^[a-z0-9_-]*: .*## .*" \
+		| awk 'BEGIN {FS = ":.*?## "} \
+		  {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+check: ## update manifests, run linters and update metadata
 	rm -rf metadata/md5-cache/
 	find . -iname manifest -delete
 	find . -type d -exec chmod 0755 {} \;
@@ -11,11 +19,11 @@ check:
 	pkgcheck scan
 	git status
 
-hooks:
+hooks: ## install pre-commit hooks
 	pre-commit install --hook-type prepare-commit-msg
 
-python_compat:
+python_compat: ## search for PYTHON_COMPAT
 	grep --color=always --include='*.ebuild' -r ^PYTHON_COMPAT=
 
-python_usedep:
+python_usedep: ## search for missing PYTHON_USEDEP
 	grep --color=always --include='*.ebuild' -r dev-python/ * | grep -v PYTHON_USEDEP
