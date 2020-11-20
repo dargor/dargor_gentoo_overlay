@@ -1,0 +1,2 @@
+# Allow to use versions from this overlay
+>=dev-python/ptpython-3.0
