@@ -5,11 +5,11 @@ EAPI=7
 
 inherit autotools
 
-COMMITHASH="4729393a8d9c5c813de53fda90f10e1cbb27cd4d"
+MY_PV="p5.9.20201122.0"
 
 DESCRIPTION="Exuberant Ctags creates tags files for code browsing in editors"
 HOMEPAGE="https://ctags.io/ https://github.com/universal-ctags/ctags"
-SRC_URI="https://github.com/universal-ctags/ctags/archive/${COMMITHASH}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/universal-ctags/ctags/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -30,7 +30,7 @@ DEPEND="
 	dev-python/docutils
 	virtual/pkgconfig"
 
-S="${WORKDIR}/${PN}-${COMMITHASH}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
 	default
