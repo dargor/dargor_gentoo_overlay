@@ -9,7 +9,6 @@ help: ## show targets
 		  {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 check: ## update manifests, run linters and update metadata
-	rm -rf metadata/md5-cache/
 	find . -iname manifest -delete
 	find . -type d -exec chmod 0755 {} \;
 	find . -type f -exec chmod 0644 {} \;
@@ -17,6 +16,7 @@ check: ## update manifests, run linters and update metadata
 	repoman manifest
 	repoman -dx full
 	pkgcheck scan
+	rm -rf metadata/md5-cache/
 	git status
 
 hooks: ## install pre-commit hooks
