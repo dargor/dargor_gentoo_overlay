@@ -17,5 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 BDEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-3.1.0[${PYTHON_USEDEP}]
 "
+
+python_prepare_all() {
+	sed -i -e '/pytest-runner/d' setup.py || die
+	distutils-r1_python_prepare_all
+}
