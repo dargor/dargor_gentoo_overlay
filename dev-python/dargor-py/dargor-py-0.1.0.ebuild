@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9} )
 
-MY_PV="112474afad2b9c32f082aa4917fbc2d9865a0817"
+MY_PV="75ec45bd5bc48a17ffe8d394f4e8815b1fbbcabf"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit distutils-r1
@@ -17,13 +17,17 @@ SRC_URI="https://github.com/dargor/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+uvloop"
+IUSE="pandas"
 
 RDEPEND="
-	dev-python/matplotlib[${PYTHON_USEDEP}]
-	dev-python/pandas[${PYTHON_USEDEP}]
-	dev-python/pygments[${PYTHON_USEDEP}]
-	uvloop? (
-		dev-python/uvloop[${PYTHON_USEDEP}]
+	pandas? (
+		dev-python/pandas[${PYTHON_USEDEP}]
 	)
+	dev-python/pygments[${PYTHON_USEDEP}]
 "
+
+python_prepare_all() {
+	# depends on geoip2
+	rm dargor/geoip.py || die
+	distutils-r1_python_prepare_all
+}

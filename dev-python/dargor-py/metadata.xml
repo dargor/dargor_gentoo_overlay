@@ -6,7 +6,7 @@
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
   <use>
-    <flag name="uvloop">Install dev-python/uvloop</flag>
+    <flag name="pandas">Install dev-python/pandas</flag>
   </use>
   <upstream>
     <remote-id type="github">dargor/dargor-py</remote-id>
