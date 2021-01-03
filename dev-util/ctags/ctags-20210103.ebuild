@@ -5,7 +5,7 @@ EAPI=7
 
 inherit autotools
 
-MY_PV="p5.9.20201122.0"
+MY_PV="p5.9.20210103.0"
 
 DESCRIPTION="Exuberant Ctags creates tags files for code browsing in editors"
 HOMEPAGE="https://ctags.io/ https://github.com/universal-ctags/ctags"
