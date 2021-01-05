@@ -5,6 +5,9 @@
     <name>Gabriel Linder</name>
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
+  <use>
+    <flag name="ipython">Add support for <pkg>dev-python/ipython</pkg></flag>
+  </use>
   <upstream>
     <remote-id type="pypi">ptpython</remote-id>
     <remote-id type="github">prompt-toolkit/ptpython</remote-id>

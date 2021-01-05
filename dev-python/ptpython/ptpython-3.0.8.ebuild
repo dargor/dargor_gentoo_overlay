@@ -4,6 +4,7 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9} )
+DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="Python REPL build on top of prompt_toolkit"
@@ -13,15 +14,26 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="ipython"
 
 RDEPEND="
 	dev-python/appdirs[${PYTHON_USEDEP}]
+	dev-python/black[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '
 		dev-python/importlib_metadata[${PYTHON_USEDEP}]
-	' python3_{6,7})
-	>=dev-python/jedi-0.9.0[${PYTHON_USEDEP}]
+	' python3_7)
+	ipython? (
+		dev-python/ipython[${PYTHON_USEDEP}]
+	)
+	>=dev-python/jedi-0.16.0[${PYTHON_USEDEP}]
 	>=dev-python/prompt_toolkit-3.0.0[${PYTHON_USEDEP}]
 	<dev-python/prompt_toolkit-3.1.0[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 "
+
+python_install() {
+	distutils-r1_python_install
+	if ! use ipython; then
+		rm "${D}"/usr/bin/ptipython* || die
+	fi
+}
