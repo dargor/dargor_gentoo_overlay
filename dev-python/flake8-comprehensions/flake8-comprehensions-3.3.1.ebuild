@@ -20,5 +20,5 @@ RDEPEND="
 	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '
 		dev-python/importlib_metadata[${PYTHON_USEDEP}]
-	' python3_{6,7})
+	' python3_7)
 "

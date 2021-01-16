@@ -4,7 +4,7 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9} )
-
+DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="Framework for managing and maintaining multi-language pre-commit hooks"
@@ -21,19 +21,9 @@ RDEPEND="
 	>=dev-python/identify-1.0.0[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '
 		dev-python/importlib_metadata[${PYTHON_USEDEP}]
-	' python3_{6,7})
-	$(python_gen_cond_dep '
-		dev-python/importlib_resources[${PYTHON_USEDEP}]
-	' python3_6)
+	' python3_7)
 	>=dev-python/nodeenv-0.11.1[${PYTHON_USEDEP}]
 	>=dev-python/pyyaml-5.1[${PYTHON_USEDEP}]
 	dev-python/toml[${PYTHON_USEDEP}]
 	>=dev-python/virtualenv-20.0.8[${PYTHON_USEDEP}]
 "
-
-# FIXME no python-exec wrapped executable found in /usr/lib/python-exec.
-#python_prepare_all() {
-#	distutils-r1_python_prepare_all
-#	sed -e "s,f'#!/usr/bin/env {py}','#!/usr/bin/python-exec2c'," \
-#		-i pre_commit/commands/install_uninstall.py || die
-#}
