@@ -26,7 +26,7 @@ RDEPEND="
 		dev-python/ipython[${PYTHON_USEDEP}]
 	)
 	>=dev-python/jedi-0.16.0[${PYTHON_USEDEP}]
-	>=dev-python/prompt_toolkit-3.0.0[${PYTHON_USEDEP}]
+	>=dev-python/prompt_toolkit-3.0.11[${PYTHON_USEDEP}]
 	<dev-python/prompt_toolkit-3.1.0[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 "
