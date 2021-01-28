@@ -5,4 +5,7 @@
     <name>Gabriel Linder</name>
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">rabbitmq/rabbitmq-server</remote-id>
+  </upstream>
 </pkgmetadata>
