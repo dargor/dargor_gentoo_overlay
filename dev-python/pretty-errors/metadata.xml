@@ -6,7 +6,7 @@
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
   <upstream>
-    <remote-id type="pypi">pretty-errors</remote-id>
     <remote-id type="github">onelivesleft/PrettyErrors</remote-id>
+    <remote-id type="pypi">pretty-errors</remote-id>
   </upstream>
 </pkgmetadata>
