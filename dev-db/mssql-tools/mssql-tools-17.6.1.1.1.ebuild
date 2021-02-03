@@ -12,6 +12,7 @@ LICENSE="mssql-tools"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="bindist mirror strip"
 
 RDEPEND="
 	dev-db/msodbcsql

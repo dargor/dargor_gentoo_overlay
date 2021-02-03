@@ -12,6 +12,7 @@ LICENSE="msodbcsql17"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="bindist mirror strip"
 
 DEPEND="
 	dev-db/unixODBC
