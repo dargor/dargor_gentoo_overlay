@@ -31,7 +31,7 @@ src_install() {
 	dodoc -r usr/share/doc
 	doins -r opt
 	for bin in bcp sqlcmd; do
-		chmod 0755 "${ED}"/opt/mssql-tools/bin/$bin || die
+		fperms +x /opt/mssql-tools/bin/$bin
 		make_wrapper $bin /opt/mssql-tools/bin/$bin
 	done
 }
