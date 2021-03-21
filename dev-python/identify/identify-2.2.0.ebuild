@@ -17,5 +17,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/editdistance[${PYTHON_USEDEP}]
+	dev-python/editdistance-s[${PYTHON_USEDEP}]
 "
