@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{7..9} )
 
-MY_PV="c713a1f087ffd686f5ed7be328fb5d9bd0b0c88d"
+MY_PV="6820ab71ea8e95605673f96dbcd39b02d3f5d6fd"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit distutils-r1
@@ -25,6 +25,7 @@ RDEPEND="
 		dev-python/pandas[${PYTHON_USEDEP}]
 	)
 	dev-python/pygments[${PYTHON_USEDEP}]
+	sys-apps/util-linux
 "
 
 python_prepare_all() {
