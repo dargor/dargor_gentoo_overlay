@@ -24,7 +24,7 @@ RDEPEND="
 	acct-group/rabbitmq
 	acct-user/rabbitmq
 	>=dev-lang/erlang-22.3[ssl]
-	<dev-lang/erlang-23.3[ssl]
+	<dev-lang/erlang-23.4[ssl]
 "
 
 DEPEND="${RDEPEND}
