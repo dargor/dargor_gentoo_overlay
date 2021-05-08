@@ -23,7 +23,7 @@ hooks: ## install pre-commit hooks
 	pre-commit install --hook-type prepare-commit-msg
 
 python_compat: ## search for PYTHON_COMPAT
-	grep --color=always --include='*.ebuild' -r ^PYTHON_COMPAT=
+	-grep --color=always --include='*.ebuild' -r ^PYTHON_COMPAT=
 
 python_usedep: ## search for missing PYTHON_USEDEP
-	grep --color=always --include='*.ebuild' -r dev-python/ * | grep -v PYTHON_USEDEP
+	-grep --color=always --include='*.ebuild' -r dev-python/ * | grep -v PYTHON_USEDEP
