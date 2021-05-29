@@ -6,7 +6,7 @@
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
   <use>
-    <flag name="aio">Enables file AIO support</flag>
+    <flag name="aio">Enable asynchronous IO support</flag>
     <flag name="ecap">Adds support for loadable content adaptation modules
       (http://www.e-cap.org)</flag>
     <flag name="esi">Enable ESI for accelerators, will cause squid reverse proxies
