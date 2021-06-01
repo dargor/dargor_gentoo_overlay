@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..9} )
 
 MY_PV="d70831245f9adb5d3419ac085523db197dd806a7"
 MY_PN="PrettyErrors"

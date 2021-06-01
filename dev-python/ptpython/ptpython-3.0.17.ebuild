@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..9} )
 DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
@@ -19,9 +19,6 @@ IUSE="ipython"
 RDEPEND="
 	dev-python/appdirs[${PYTHON_USEDEP}]
 	dev-python/black[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep '
-		dev-python/importlib_metadata[${PYTHON_USEDEP}]
-	' python3_7)
 	ipython? (
 		dev-python/ipython[${PYTHON_USEDEP}]
 	)

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..9} )
 
 MY_PV="6820ab71ea8e95605673f96dbcd39b02d3f5d6fd"
 S="${WORKDIR}/${PN}-${MY_PV}"
