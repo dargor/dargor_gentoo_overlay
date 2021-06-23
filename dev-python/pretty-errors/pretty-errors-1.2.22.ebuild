@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{8..9} )
 
-MY_PV="d70831245f9adb5d3419ac085523db197dd806a7"
+MY_PV="ec5f9f5d00cfa9f56cc9b959f32a9b3b673360dc"
 MY_PN="PrettyErrors"
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
