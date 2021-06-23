@@ -8,6 +8,9 @@ help: ## show targets
 		| awk 'BEGIN {FS = ":.*?## "} \
 		  {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
+cloc: ## run cloc(1)
+	cloc -force-lang="Bourne Again Shell,ebuild" .
+
 check: ## update manifests, run linters and update metadata
 	find . -iname manifest -delete
 	find . -type d -exec chmod 0755 {} \;
