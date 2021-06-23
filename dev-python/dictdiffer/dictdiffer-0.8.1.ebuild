@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{8..9} )
 inherit distutils-r1
 
 DESCRIPTION="Dictdiffer is a module that helps you to diff and patch dictionaries"
-HOMEPAGE="https://pypi.org/project/dictdiffer https://github.com/inveniosoftware/dictdiffer"
+HOMEPAGE="https://github.com/inveniosoftware/dictdiffer"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"

@@ -12,7 +12,7 @@ S="${WORKDIR}/${MY_PN}-${MY_PV}"
 inherit distutils-r1
 
 DESCRIPTION="Prettifies Python exception output to make it legible"
-HOMEPAGE="https://pypi.org/project/pretty-errors https://github.com/onelivesleft/PrettyErrors"
+HOMEPAGE="https://github.com/onelivesleft/PrettyErrors"
 SRC_URI="https://github.com/onelivesleft/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
