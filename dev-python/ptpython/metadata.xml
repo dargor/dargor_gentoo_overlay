@@ -6,6 +6,7 @@
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
   <use>
+    <flag name="black">Add support for <pkg>dev-python/black</pkg></flag>
     <flag name="ipython">Add support for <pkg>dev-python/ipython</pkg></flag>
   </use>
   <upstream>

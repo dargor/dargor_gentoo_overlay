@@ -14,9 +14,12 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ipython"
+IUSE="black ipython"
 
 RDEPEND="
+	black? (
+		dev-python/black[${PYTHON_USEDEP}]
+	)
 	dev-python/appdirs[${PYTHON_USEDEP}]
 	dev-python/black[${PYTHON_USEDEP}]
 	ipython? (
