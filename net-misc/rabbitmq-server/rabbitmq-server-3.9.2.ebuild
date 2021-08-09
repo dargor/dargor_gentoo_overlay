@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 PYTHON_COMPAT=( python3_{8..9} )
 
@@ -14,7 +14,6 @@ SRC_URI="https://github.com/rabbitmq/rabbitmq-server/releases/download/v${PV}/ra
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~x86"
-IUSE=""
 RESTRICT="test"
 
 # erlang: cf release notes
@@ -31,11 +30,14 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
-	>=dev-lang/elixir-1.10.4
-	<dev-lang/elixir-1.13.0
+	>=dev-lang/elixir-1.10.4 <dev-lang/elixir-1.13.0
 	dev-libs/libxslt
 	$(python_gen_any_dep 'dev-python/simplejson[${PYTHON_USEDEP}]')
 "
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+}
 
 src_compile() {
 	emake all docs dist
@@ -77,5 +79,5 @@ src_install() {
 
 	# create the mnesia directory
 	diropts -m 0770 -o rabbitmq -g rabbitmq
-	keepdir /var/lib/rabbitmq{,/mnesia}
+	keepdir /var/lib/rabbitmq/mnesia
 }
