@@ -11,7 +11,7 @@ SRC_URI="https://github.com/edenhill/kafkacat/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="+avro +json"
 
 DEPEND="
