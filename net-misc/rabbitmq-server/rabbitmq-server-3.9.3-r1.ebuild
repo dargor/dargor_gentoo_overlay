@@ -79,5 +79,5 @@ src_install() {
 
 	# create the mnesia directory
 	diropts -m 0770 -o rabbitmq -g rabbitmq
-	keepdir /var/lib/rabbitmq/mnesia
+	keepdir /var/lib/rabbitmq/{,mnesia}
 }
