@@ -10,6 +10,6 @@
     <flag name="json">Enable json support</flag>
   </use>
   <upstream>
-    <remote-id type="github">edenhill/kafkacat</remote-id>
+    <remote-id type="github">edenhill/kcat</remote-id>
   </upstream>
 </pkgmetadata>

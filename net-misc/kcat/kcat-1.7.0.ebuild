@@ -6,8 +6,8 @@ EAPI=7
 inherit toolchain-funcs
 
 DESCRIPTION="Generic command line non-JVM Apache Kafka producer and consumer"
-HOMEPAGE="https://github.com/edenhill/kafkacat"
-SRC_URI="https://github.com/edenhill/kafkacat/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/edenhill/kcat"
+SRC_URI="https://github.com/edenhill/kcat/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
