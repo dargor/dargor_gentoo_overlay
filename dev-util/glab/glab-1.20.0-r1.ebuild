@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit go-module
+inherit bash-completion-r1 go-module
 
 DESCRIPTION="GitLab command line tool"
 HOMEPAGE="https://github.com/profclems/glab"
@@ -749,9 +749,16 @@ RESTRICT="test"
 src_compile() {
 	export GLAB_VERSION="${PV}"
 	default
+
+	go run ./cmd/glab completion -s bash > glab.bash-completion || die
+	go run ./cmd/glab completion -s zsh > glab.zsh-completion || die
 }
 
 src_install() {
 	dobin bin/glab
 	dodoc README.md
+
+	newbashcomp glab.bash-completion glab
+	insinto /usr/share/zsh/site-functions
+	newins glab.zsh-completion _glab
 }
