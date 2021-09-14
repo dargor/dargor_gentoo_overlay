@@ -21,7 +21,6 @@ RDEPEND="
 		dev-python/black[${PYTHON_USEDEP}]
 	)
 	dev-python/appdirs[${PYTHON_USEDEP}]
-	dev-python/black[${PYTHON_USEDEP}]
 	ipython? (
 		dev-python/ipython[${PYTHON_USEDEP}]
 	)
