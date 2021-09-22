@@ -1,11 +1,11 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{8..9} )
 
-MY_PV="6820ab71ea8e95605673f96dbcd39b02d3f5d6fd"
+MY_PV="e07677f3b97a51c725f0b2fcb845a3e2e76e42bb"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit distutils-r1
