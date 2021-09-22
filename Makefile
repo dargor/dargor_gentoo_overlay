@@ -25,6 +25,9 @@ check: ## update manifests, run linters and update metadata
 hooks: ## install pre-commit hooks
 	pre-commit install --hook-type prepare-commit-msg
 
+eapi: ## search for EAPI
+	-grep --color=always --include='*.ebuild' -r ^EAPI=
+
 python_compat: ## search for PYTHON_COMPAT
 	-grep --color=always --include='*.ebuild' -r ^PYTHON_COMPAT=
 
