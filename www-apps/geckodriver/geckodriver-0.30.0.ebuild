@@ -164,7 +164,7 @@ CRATES="
 
 inherit cargo
 
-DESCRIPTION="Proxy for using WebDriver clients to interact with Gecko-based browsers."
+DESCRIPTION="WebDriver for Gecko-based browsers"
 HOMEPAGE="https://github.com/mozilla/geckodriver"
 SRC_URI="
 	https://github.com/mozilla/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
