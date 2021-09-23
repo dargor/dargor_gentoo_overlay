@@ -86,7 +86,7 @@ CRATES="
 
 inherit cargo
 
-DESCRIPTION="Command-line HTML processor - like jq, but for HTML."
+DESCRIPTION="Command-line HTML processor - like jq, but for HTML"
 HOMEPAGE="https://github.com/mgdm/htmlq"
 SRC_URI="
 	https://github.com/mgdm/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
