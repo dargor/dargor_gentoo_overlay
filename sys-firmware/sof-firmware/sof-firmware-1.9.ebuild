@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Sound Open Firmware (SOF) binary files"
 
@@ -13,18 +13,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-BDEPEND="
-	net-misc/rsync
-"
-
 S=${WORKDIR}/sof-bin-${PV}
 QA_PREBUILT="*"
 
 src_install() {
-	FW_DEST=${D}/lib/firmware/intel
-	TOOLS_DEST=${D}/usr/bin
 
-	mkdir -p "${FW_DEST}" "${TOOLS_DEST}" || die
-	FW_DEST="${FW_DEST}" TOOLS_DEST="${TOOLS_DEST}" \
-		${S}/install.sh v${PV}.x/v${PV} || die
+	insinto /lib/firmware/intel/sof
+	doins -r v${PV}.x/sof-v${PV}/*
+
+	insinto /lib/firmware/intel/sof-tplg
+	doins -r v${PV}.x/sof-tplg-v${PV}/*
+
+	for bin in v${PV}.x/tools-v${PV}/*; do
+		dobin ${bin}
+	done
+
 }
