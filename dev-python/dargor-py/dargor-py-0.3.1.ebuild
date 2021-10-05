@@ -3,9 +3,9 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 
-MY_PV="e07677f3b97a51c725f0b2fcb845a3e2e76e42bb"
+MY_PV="acec0db8ad90bc9ccdae00678c05829e99452816"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit distutils-r1
