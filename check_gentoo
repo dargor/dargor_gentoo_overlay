@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+set -eu
+
+# shellcheck disable=SC1091
+. /etc/portage/make.conf
+
+PORTDIR="${PORTDIR:-/usr/portage}"
+
+for f in */*; do
+    [ ! -d "$f" ] && continue
+    [ "$f" = "profiles/updates" ] && continue
+    if [ -d "${PORTDIR}/$f" ]; then
+        echo "[93m>>>[0m [94m$f[0m found in [95m::gentoo[0m"
+    fi
+done

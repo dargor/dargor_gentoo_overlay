@@ -36,3 +36,6 @@ python_gen_cond_dep: ## search for python_gen_cond_dep
 
 python_usedep: ## search for missing PYTHON_USEDEP
 	-grep --color=always --include='*.ebuild' -r dev-python/ * | grep -v PYTHON_USEDEP
+
+gentoo: ## search for available ebuilds in ::gentoo
+	./check_gentoo
