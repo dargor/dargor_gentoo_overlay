@@ -55,6 +55,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_PYTHON=$(usex python ON OFF)
 		-DBUILD_FLATBUFFERS=$(usex flatbuffers ON OFF)
+		-DBUILD_TESTS=OFF
 		-DRAPIDJSON_SYS_DEP=ON
 		-DSPDLOG_SYS_DEP=ON
 		-DFMT_SYS_DEP=ON
