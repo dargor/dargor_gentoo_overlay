@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Gabriel Linder</name>
+    <email>linder.gabriel@gmail.com</email>
+  </maintainer>
+  <use>
+    <flag name="flatbuffers">Build with <pkg>dev-libs/flatbuffers</pkg> support</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">VowpalWabbit/vowpal_wabbit</remote-id>
+    <remote-id type="pypi">vowpalwabbit</remote-id>
+  </upstream>
+</pkgmetadata>
