@@ -24,6 +24,7 @@ RDEPEND="
 	dev-python/pyperclip[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/typing-extensions[${PYTHON_USEDEP}]
 	dev-python/urwid[${PYTHON_USEDEP}]
 	dev-python/watchdog[${PYTHON_USEDEP}]
 "
@@ -33,8 +34,6 @@ BDEPEND="
 "
 
 DOCS=( AUTHORS.rst CHANGELOG.rst )
-
-PATCHES=( "${FILESDIR}"/${PN}-sphinx-4.patch )
 
 distutils_enable_sphinx doc/sphinx/source --no-autodoc
 distutils_enable_tests unittest
