@@ -38,6 +38,9 @@ src_prepare() {
 src_configure() {
 	CMAKE_BUILD_TYPE="Release"
 	local mycmakeargs=(
+		-DCMAKE_C_FLAGS_RELEASE="-DNDEBUG"
+		-DCMAKE_CXX_FLAGS_RELEASE="-DNDEBUG"
+		-DCMAKE_VERBOSE_MAKEFILE=ON
 		-DBUILD_PYTHON=OFF
 		-DBUILD_FLATBUFFERS=$(usex flatbuffers ON OFF)
 		-DBUILD_TESTS=OFF
