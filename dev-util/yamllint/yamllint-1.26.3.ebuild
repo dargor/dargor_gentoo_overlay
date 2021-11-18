@@ -9,7 +9,7 @@ DISTUTILS_USE_SETUPTOOLS=rdepend
 inherit distutils-r1
 
 DESCRIPTION="Linter for YAML files"
-HOMEPAGE="https://pypi.org/project/yamllint/ https://github.com/adrienverge/yamllint"
+HOMEPAGE="https://github.com/adrienverge/yamllint"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
