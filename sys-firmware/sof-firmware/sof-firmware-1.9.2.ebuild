@@ -19,12 +19,12 @@ QA_PREBUILT="*"
 src_install() {
 
 	insinto /lib/firmware/intel/sof
-	doins -r v${PV}.x/sof-v${PV}/*
+	doins -r v$(ver_cut 1-2).x/sof-v${PV}/*
 
 	insinto /lib/firmware/intel/sof-tplg
-	doins -r v${PV}.x/sof-tplg-v${PV}/*
+	doins -r v$(ver_cut 1-2).x/sof-tplg-v${PV}/*
 
-	for bin in v${PV}.x/tools-v${PV}/*; do
+	for bin in v$(ver_cut 1-2).x/tools-v${PV}/*; do
 		dobin ${bin}
 	done
 
