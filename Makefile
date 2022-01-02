@@ -28,6 +28,9 @@ hooks: ## install pre-commit hooks
 eapi: ## search for EAPI
 	-grep --color=always --include='*.ebuild' -r ^EAPI=
 
+copyright: ## search for "Copyright .* Gentoo Authors"
+	-grep --color=always --exclude=Makefile -r "Copyright .* Gentoo Authors" *
+
 python_compat: ## search for PYTHON_COMPAT
 	-grep --color=always --include='*.ebuild' -r ^PYTHON_COMPAT=
 
