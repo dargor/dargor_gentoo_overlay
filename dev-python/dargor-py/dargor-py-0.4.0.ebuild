@@ -5,14 +5,11 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{8..10} )
 
-MY_PV="acec0db8ad90bc9ccdae00678c05829e99452816"
-S="${WORKDIR}/${PN}-${MY_PV}"
-
 inherit distutils-r1
 
 DESCRIPTION="Dargor's most common routines"
 HOMEPAGE="https://github.com/dargor/dargor-py"
-SRC_URI="https://github.com/dargor/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/dargor/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
