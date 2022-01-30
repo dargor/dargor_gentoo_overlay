@@ -21,13 +21,14 @@ BDEPEND="
 	dev-util/cmake
 "
 
+# rapidjson, spdlog and libfmt: see ext_libs/ext_libs.cmake
 DEPEND="
 	dev-libs/boost[python,${PYTHON_USEDEP}]
 	sys-libs/zlib
-	dev-libs/rapidjson
+	~dev-libs/rapidjson-1.1.0
 	flatbuffers? ( dev-libs/flatbuffers )
-	dev-libs/spdlog
-	dev-libs/libfmt
+	~dev-libs/spdlog-1.8.2
+	~dev-libs/libfmt-7.1.3
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/pandas[${PYTHON_USEDEP}]
 	dev-python/scipy[${PYTHON_USEDEP}]
