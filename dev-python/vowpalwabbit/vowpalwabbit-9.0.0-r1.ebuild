@@ -39,6 +39,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/vowpal_wabbit-${PV}/"
 
+DOCS=(
+	"python/README.rst"
+)
+
 src_prepare() {
 	default
 	rm -r ext_libs/{fmt,rapidjson,spdlog} || die
