@@ -70,4 +70,4 @@ LICENSE="0BSD Apache-2.0 Boost-1.0 MIT Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/${PN}-${PN}-${PV}/"
+S="${WORKDIR}/${PN}-${P}"
