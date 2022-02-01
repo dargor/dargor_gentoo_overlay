@@ -3,35 +3,26 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
-inherit distutils-r1
+inherit cmake
 
-DESCRIPTION="Vowpal Wabbit fast online learning code (python module)"
+DESCRIPTION="Vowpal Wabbit fast online learning code (vw command)"
 HOMEPAGE="https://github.com/VowpalWabbit/vowpal_wabbit https://vowpalwabbit.org"
 SRC_URI="https://github.com/VowpalWabbit/vowpal_wabbit/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="flatbuffers"
+IUSE="flatbuffers python"
 RESTRICT="test"
 
-BDEPEND="
-	dev-util/cmake
-"
-
-# rapidjson, spdlog and libfmt: see ext_libs/ext_libs.cmake
 DEPEND="
-	dev-libs/boost[python,${PYTHON_USEDEP}]
+	dev-libs/boost
 	sys-libs/zlib
-	~dev-libs/rapidjson-1.1.0
+	dev-libs/rapidjson
 	flatbuffers? ( dev-libs/flatbuffers )
-	~dev-libs/spdlog-1.8.2
-	~dev-libs/libfmt-7.1.3
-	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/pandas[${PYTHON_USEDEP}]
-	dev-python/scipy[${PYTHON_USEDEP}]
-	sci-libs/scikit-learn[${PYTHON_USEDEP}]
+	dev-libs/spdlog
+	dev-libs/libfmt
+	python? ( dev-python/vowpalwabbit[flatbuffers?] )
 "
 
 RDEPEND="${DEPEND}"
@@ -39,32 +30,27 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/vowpal_wabbit-${PV}/"
 
 DOCS=(
-	"python/README.rst"
+	"README.md"
 )
 
 src_prepare() {
-	default
 	rm -r ext_libs/{fmt,rapidjson,spdlog} || die
 	sed -i -e 's/-O3//g' CMakeLists.txt || die
+	cmake_src_prepare
 }
 
-python_compile() {
+src_configure() {
 	CMAKE_BUILD_TYPE="Release"
 	local mycmakeargs=(
 		-DCMAKE_C_FLAGS_RELEASE="-DNDEBUG"
 		-DCMAKE_CXX_FLAGS_RELEASE="-DNDEBUG"
 		-DCMAKE_VERBOSE_MAKEFILE=ON
-		-DBUILD_PYTHON=ON
-		-DPY_VERSION=${EPYTHON/python/}
+		-DBUILD_PYTHON=OFF
 		-DBUILD_FLATBUFFERS=$(usex flatbuffers ON OFF)
 		-DBUILD_TESTS=OFF
 		-DRAPIDJSON_SYS_DEP=ON
 		-DSPDLOG_SYS_DEP=ON
 		-DFMT_SYS_DEP=ON
 	)
-	local cmake_options=""
-	for arg in "${mycmakeargs[@]}"; do
-		cmake_options="${cmake_options};${arg}"
-	done
-	esetup.py --cmake-options "${cmake_options#;}" build
+	cmake_src_configure
 }
