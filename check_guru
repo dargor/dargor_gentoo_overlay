@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+set -eu
+
+PORTDIR="/var/overlays/guru"
+
+for f in */*; do
+    [ ! -d "$f" ] && continue
+    [ "$f" = "profiles/updates" ] && continue
+    if [ -d "${PORTDIR}/$f" ]; then
+        echo "[93m>>>[0m [94m$f[0m found in [95m::guru[0m"
+    fi
+done
