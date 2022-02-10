@@ -14,19 +14,11 @@ SRC_URI="https://github.com/dargor/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pandas"
+IUSE=""
 
 RDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
-	pandas? (
-		dev-python/pandas[${PYTHON_USEDEP}]
-	)
+	dev-python/pandas[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	sys-apps/util-linux
 "
-
-python_prepare_all() {
-	# depends on geoip2
-	rm dargor/geoip.py || die
-	distutils-r1_python_prepare_all
-}

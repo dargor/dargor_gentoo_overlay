@@ -5,10 +5,8 @@
     <name>Gabriel Linder</name>
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
-  <use>
-    <flag name="pandas">Install dev-python/pandas</flag>
-  </use>
   <upstream>
     <remote-id type="github">dargor/dargor-py</remote-id>
+    <remote-id type="pypi">dargor</remote-id>
   </upstream>
 </pkgmetadata>
