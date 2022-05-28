@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python wrapper for TA-Lib"
 HOMEPAGE="https://github.com/mrjbq7/ta-lib"
-SRC_URI="https://github.com/mrjbq7/ta-lib/archive/TA_Lib-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/mrjbq7/ta-lib/archive/TA_Lib-${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python port of daemontools' envdir"
 HOMEPAGE="https://github.com/jezdez/envdir"
-SRC_URI="https://github.com/jezdez/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/jezdez/${PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

@@ -13,7 +13,7 @@ inherit distutils-r1
 
 DESCRIPTION="Prettifies Python exception output to make it legible"
 HOMEPAGE="https://github.com/onelivesleft/PrettyErrors"
-SRC_URI="https://github.com/onelivesleft/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/onelivesleft/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

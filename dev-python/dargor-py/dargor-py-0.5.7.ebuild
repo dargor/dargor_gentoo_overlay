@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Dargor's most common routines"
 HOMEPAGE="https://github.com/dargor/dargor-py"
-SRC_URI="https://github.com/dargor/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/dargor/${PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
