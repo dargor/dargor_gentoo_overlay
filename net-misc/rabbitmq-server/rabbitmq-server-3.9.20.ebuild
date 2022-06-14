@@ -36,6 +36,10 @@ DEPEND="${RDEPEND}
 	$(python_gen_any_dep 'dev-python/simplejson[${PYTHON_USEDEP}]')
 "
 
+python_check_deps() {
+	has_version -d "dev-python/simplejson[${PYTHON_USEDEP}]"
+}
+
 pkg_setup() {
 	python-any-r1_pkg_setup
 }
