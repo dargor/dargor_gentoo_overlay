@@ -26,7 +26,7 @@ DEPEND="
 	dev-libs/rapidjson
 	flatbuffers? ( dev-libs/flatbuffers )
 	dev-libs/spdlog
-	dev-libs/libfmt
+	<dev-libs/libfmt-9.0.0
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/pandas[${PYTHON_USEDEP}]
 	dev-python/scipy[${PYTHON_USEDEP}]

@@ -21,7 +21,7 @@ DEPEND="
 	dev-libs/rapidjson
 	flatbuffers? ( dev-libs/flatbuffers )
 	dev-libs/spdlog
-	dev-libs/libfmt
+	<dev-libs/libfmt-9.0.0
 	python? ( dev-python/vowpalwabbit[flatbuffers?] )
 "
 
