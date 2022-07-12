@@ -34,12 +34,15 @@ DOCS=(
 )
 
 src_prepare() {
+	# https://github.com/VowpalWabbit/vowpal_wabbit/wiki/Dependencies
+	# string-view-lite and eigen can't be system (yet ?)
 	rm -r ext_libs/{boost_math,fmt,rapidjson,spdlog,zlib} || die
 	sed -i -e 's/-O3//g' CMakeLists.txt || die
 	cmake_src_prepare
 }
 
 src_configure() {
+	# https://github.com/VowpalWabbit/vowpal_wabbit/wiki/Building
 	CMAKE_BUILD_TYPE="Release"
 	local mycmakeargs=(
 		-DCMAKE_C_FLAGS_RELEASE="-DNDEBUG"
