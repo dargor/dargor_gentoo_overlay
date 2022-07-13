@@ -16,8 +16,7 @@ check: ## update manifests, run linters and update metadata
 	find . -type d -exec chmod 0755 {} \;
 	find . -type f -exec chmod 0644 {} \;
 	chmod 0755 .git/hooks/prepare-commit-msg check_gentoo check_guru
-	repoman manifest
-	repoman -dx full
+	pkgdev manifest
 	pkgcheck scan
 	rm -rf metadata/md5-cache/
 	git status
