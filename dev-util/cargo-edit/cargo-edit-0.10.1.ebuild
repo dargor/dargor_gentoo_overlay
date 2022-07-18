@@ -20,7 +20,7 @@ CRATES="
 	bytes-1.1.0
 	camino-1.0.7
 	cargo-platform-0.1.2
-	cargo_metadata-0.14.2
+	cargo_metadata-0.15.0
 	cc-1.0.73
 	cfg-if-1.0.0
 	chunked_transfer-1.4.0
@@ -73,7 +73,7 @@ CRATES="
 	itoa-1.0.1
 	jobserver-0.1.24
 	js-sys-0.3.56
-	kstring-1.0.6
+	kstring-2.0.0
 	lazy_static-1.4.0
 	libc-0.2.121
 	libgit2-sys-0.13.2+1.4.2
@@ -147,8 +147,8 @@ CRATES="
 	thread_local-1.1.4
 	tinyvec-1.5.1
 	tinyvec_macros-0.1.0
-	toml_edit-0.13.4
-	trycmd-0.13.3
+	toml_edit-0.14.4
+	trycmd-0.13.4
 	unicode-bidi-0.3.7
 	unicode-normalization-0.1.19
 	unicode-xid-0.2.2
@@ -183,7 +183,8 @@ SRC_URI="
 	https://github.com/killercup/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris)
 "
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unlicense ZLIB"
+
+LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
