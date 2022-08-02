@@ -18,5 +18,6 @@ IUSE=""
 
 RDEPEND="
 	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
+	<dev-python/flake8-5[${PYTHON_USEDEP}]
 	>=dev-python/nose-1.3.7[${PYTHON_USEDEP}]
 "
