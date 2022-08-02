@@ -23,7 +23,7 @@ RESTRICT="test"
 RDEPEND="
 	acct-group/rabbitmq
 	acct-user/rabbitmq
-	>=dev-lang/erlang-23.2[ssl] <dev-lang/erlang-25.0
+	>=dev-lang/erlang-24.0[ssl] <dev-lang/erlang-26.0
 "
 
 DEPEND="${RDEPEND}
