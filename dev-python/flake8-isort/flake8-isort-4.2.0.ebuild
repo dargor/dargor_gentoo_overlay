@@ -18,8 +18,7 @@ IUSE=""
 
 RDEPEND="
 	>=dev-python/flake8-3.2.1[${PYTHON_USEDEP}]
-	<dev-python/flake8-5[${PYTHON_USEDEP}]
+	<dev-python/flake8-6[${PYTHON_USEDEP}]
 	>=dev-python/isort-4.3.5[${PYTHON_USEDEP}]
 	<dev-python/isort-6[${PYTHON_USEDEP}]
-	>=dev-python/testfixtures-6.8.0[${PYTHON_USEDEP}]
 "
