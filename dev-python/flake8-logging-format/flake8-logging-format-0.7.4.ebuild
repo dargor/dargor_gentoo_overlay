@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit vcs-snapshot distutils-r1
 
@@ -21,5 +21,4 @@ S="${WORKDIR}/${P}.gh/"
 
 RDEPEND="
 	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
-	>=dev-python/nose-1.3.7[${PYTHON_USEDEP}]
 "
