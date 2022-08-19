@@ -5,19 +5,16 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit vcs-snapshot distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Flake8 extension to validate (lack of) logging format strings"
 HOMEPAGE="https://github.com/globality-corp/flake8-logging-format"
-COMMIT="f3cdb24468241ebe85e41b0bd2e8958c76b4dec6"
-SRC_URI="https://github.com/globality-corp/flake8-logging-format/archive/${COMMIT}.tar.gz -> ${P}.gh.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-S="${WORKDIR}/${P}.gh/"
 
 RDEPEND="
 	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
