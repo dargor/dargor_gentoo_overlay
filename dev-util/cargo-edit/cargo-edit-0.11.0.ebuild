@@ -8,7 +8,7 @@ EAPI=8
 CRATES="
 	adler-1.0.2
 	aho-corasick-0.7.18
-	anyhow-1.0.56
+	anyhow-1.0.62
 	assert_cmd-2.0.4
 	assert_fs-1.0.7
 	atty-0.2.14
@@ -16,18 +16,19 @@ CRATES="
 	base64-0.13.0
 	bitflags-1.3.2
 	bstr-0.2.17
-	bumpalo-3.9.1
+	bumpalo-3.11.0
 	byteorder-1.4.3
-	bytes-1.1.0
-	camino-1.0.7
+	bytes-1.2.1
+	camino-1.1.1
 	cargo-platform-0.1.2
 	cargo_metadata-0.15.0
 	cc-1.0.73
 	cfg-if-1.0.0
 	chunked_transfer-1.4.0
-	clap-3.1.6
-	clap_derive-3.1.4
-	combine-4.6.3
+	clap-3.2.17
+	clap_derive-3.2.17
+	clap_lex-0.2.4
+	combine-4.6.6
 	commoncrypto-0.2.0
 	commoncrypto-sys-0.2.0
 	concolor-0.0.8
@@ -37,34 +38,34 @@ CRATES="
 	content_inspector-0.2.4
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
-	crates-index-0.18.7
+	crates-index-0.18.9
 	crc32fast-1.3.2
-	crossbeam-channel-0.5.4
-	crossbeam-deque-0.8.1
-	crossbeam-epoch-0.9.8
-	crossbeam-utils-0.8.8
+	crossbeam-channel-0.5.6
+	crossbeam-deque-0.8.2
+	crossbeam-epoch-0.9.10
+	crossbeam-utils-0.8.11
 	crypto-hash-0.3.4
 	difflib-0.4.0
 	dirs-next-2.0.0
 	dirs-sys-next-0.1.2
 	doc-comment-0.3.3
 	dunce-1.0.2
-	either-1.6.1
+	either-1.8.0
 	env_proxy-0.4.1
-	fastrand-1.7.0
-	filetime-0.2.15
-	flate2-1.0.23
+	fastrand-1.8.0
+	filetime-0.2.17
+	flate2-1.0.24
 	float-cmp-0.9.0
 	fnv-1.0.7
 	foreign-types-0.3.2
 	foreign-types-shared-0.1.1
 	form_urlencoded-1.0.1
-	getrandom-0.2.6
-	git2-0.14.2
+	getrandom-0.2.7
+	git2-0.14.4
 	glob-0.3.0
-	globset-0.4.8
+	globset-0.4.9
 	globwalk-0.8.1
-	hashbrown-0.11.2
+	hashbrown-0.12.3
 	heck-0.4.0
 	hermit-abi-0.1.19
 	hex-0.3.2
@@ -74,115 +75,122 @@ CRATES="
 	humantime-serde-1.1.1
 	idna-0.2.3
 	ignore-0.4.18
-	indexmap-1.8.0
+	indexmap-1.9.1
 	instant-0.1.12
 	itertools-0.10.3
-	itoa-1.0.1
+	itoa-1.0.3
 	jobserver-0.1.24
-	js-sys-0.3.56
+	js-sys-0.3.59
 	kstring-2.0.0
 	lazy_static-1.4.0
-	libc-0.2.121
-	libgit2-sys-0.13.2+1.4.2
+	libc-0.2.132
+	libgit2-sys-0.13.4+1.4.2
 	libssh2-sys-0.2.23
-	libz-sys-1.1.5
-	log-0.4.16
+	libz-sys-1.1.8
+	log-0.4.17
 	matches-0.1.9
-	memchr-2.4.1
+	memchr-2.5.0
 	memoffset-0.6.5
 	miniz_oxide-0.5.3
 	miow-0.3.7
-	native-tls-0.2.9
+	native-tls-0.2.10
 	normalize-line-endings-0.3.0
-	num-traits-0.2.14
+	num-traits-0.2.15
 	num_cpus-1.13.1
-	once_cell-1.10.0
-	openssl-0.10.38
+	once_cell-1.13.1
+	openssl-0.10.41
+	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-src-111.18.0+1.1.1n
-	openssl-sys-0.9.72
+	openssl-src-111.22.0+1.1.1q
+	openssl-sys-0.9.75
 	os_pipe-1.0.1
-	os_str_bytes-6.0.0
+	os_str_bytes-6.3.0
 	pathdiff-0.2.1
 	percent-encoding-2.1.0
-	pkg-config-0.3.24
+	pkg-config-0.3.25
 	predicates-2.1.1
 	predicates-core-1.0.3
 	predicates-tree-1.0.5
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.36
-	quote-1.0.17
-	rayon-1.5.1
-	rayon-core-1.9.1
-	redox_syscall-0.2.12
-	redox_users-0.4.2
-	regex-1.5.5
+	proc-macro2-1.0.43
+	quote-1.0.21
+	rayon-1.5.3
+	rayon-core-1.9.3
+	redox_syscall-0.2.16
+	redox_users-0.4.3
+	regex-1.6.0
 	regex-automata-0.1.10
-	regex-syntax-0.6.25
+	regex-syntax-0.6.27
 	remove_dir_all-0.5.3
 	ring-0.16.20
 	rustc-hash-1.1.0
-	rustls-0.20.4
-	ryu-1.0.9
+	rustls-0.20.6
+	ryu-1.0.11
 	same-file-1.0.6
-	schannel-0.1.19
+	schannel-0.1.20
 	scopeguard-1.1.0
 	sct-0.7.0
-	security-framework-2.6.1
+	security-framework-2.7.0
 	security-framework-sys-2.6.1
-	semver-1.0.7
-	serde-1.0.136
-	serde_derive-1.0.136
-	serde_json-1.0.79
+	semver-1.0.13
+	serde-1.0.144
+	serde_derive-1.0.144
+	serde_json-1.0.85
 	shell-escape-0.1.5
 	shlex-1.1.0
-	similar-2.1.0
+	similar-2.2.0
 	smartstring-1.0.1
-	snapbox-0.2.10
-	snapbox-macros-0.2.1
+	snapbox-0.3.3
+	snapbox-macros-0.3.0
 	socks-0.3.4
 	spin-0.5.2
 	static_assertions-1.1.0
 	strsim-0.10.0
-	subprocess-0.2.8
-	syn-1.0.89
+	subprocess-0.2.9
+	syn-1.0.99
 	tar-0.4.38
 	tempfile-3.3.0
 	termcolor-1.1.3
 	terminal_size-0.1.17
 	termtree-0.2.4
 	textwrap-0.15.0
-	thiserror-1.0.30
-	thiserror-impl-1.0.30
+	thiserror-1.0.32
+	thiserror-impl-1.0.32
 	thread_local-1.1.4
-	tinyvec-1.5.1
+	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
 	toml_edit-0.14.4
-	trycmd-0.13.4
-	unicode-bidi-0.3.7
-	unicode-normalization-0.1.19
-	unicode-xid-0.2.2
+	trycmd-0.13.6
+	unicode-bidi-0.3.8
+	unicode-ident-1.0.3
+	unicode-normalization-0.1.21
 	untrusted-0.7.1
-	ureq-2.4.0
+	ureq-2.5.0
 	url-2.2.2
 	vcpkg-0.2.15
 	version_check-0.9.4
 	wait-timeout-0.2.0
 	walkdir-2.3.2
-	wasi-0.10.2+wasi-snapshot-preview1
-	wasm-bindgen-0.2.79
-	wasm-bindgen-backend-0.2.79
-	wasm-bindgen-macro-0.2.79
-	wasm-bindgen-macro-support-0.2.79
-	wasm-bindgen-shared-0.2.79
-	web-sys-0.3.56
+	wasi-0.11.0+wasi-snapshot-preview1
+	wasm-bindgen-0.2.82
+	wasm-bindgen-backend-0.2.82
+	wasm-bindgen-macro-0.2.82
+	wasm-bindgen-macro-support-0.2.82
+	wasm-bindgen-shared-0.2.82
+	web-sys-0.3.59
 	webpki-0.22.0
-	webpki-roots-0.22.2
+	webpki-roots-0.22.4
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
+	windows-sys-0.36.1
+	windows_aarch64_msvc-0.36.1
+	windows_i686_gnu-0.36.1
+	windows_i686_msvc-0.36.1
+	windows_x86_64_gnu-0.36.1
+	windows_x86_64_msvc-0.36.1
 	yansi-0.5.1
 "
 
@@ -195,7 +203,7 @@ SRC_URI="
 	$(cargo_crate_uris)
 "
 
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
