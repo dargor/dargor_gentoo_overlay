@@ -23,7 +23,7 @@ RESTRICT="test"
 RDEPEND="
 	acct-group/rabbitmq
 	acct-user/rabbitmq
-	>=dev-lang/erlang-24.0[ssl] <dev-lang/erlang-26.0
+	>=dev-lang/erlang-24.2[ssl] <dev-lang/erlang-26.0
 "
 
 DEPEND="${RDEPEND}
@@ -31,13 +31,13 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
-	>=dev-lang/elixir-1.10.4 <dev-lang/elixir-1.14.0
+	>=dev-lang/elixir-1.10.4 <dev-lang/elixir-1.15.0
 	dev-libs/libxslt
 	$(python_gen_any_dep 'dev-python/simplejson[${PYTHON_USEDEP}]')
 "
 
 python_check_deps() {
-	has_version -d "dev-python/simplejson[${PYTHON_USEDEP}]"
+	python_has_version -d "dev-python/simplejson[${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {
