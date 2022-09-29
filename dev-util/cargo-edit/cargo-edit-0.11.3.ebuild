@@ -25,9 +25,9 @@ CRATES="
 	cc-1.0.73
 	cfg-if-1.0.0
 	chunked_transfer-1.4.0
-	clap-3.2.17
-	clap_derive-3.2.17
-	clap_lex-0.2.4
+	clap-4.0.0
+	clap_derive-4.0.0
+	clap_lex-0.3.0
 	combine-4.6.6
 	commoncrypto-0.2.0
 	commoncrypto-sys-0.2.0
@@ -52,6 +52,8 @@ CRATES="
 	dunce-1.0.2
 	either-1.8.0
 	env_proxy-0.4.1
+	errno-0.2.8
+	errno-dragonfly-0.1.2
 	fastrand-1.8.0
 	filetime-0.2.17
 	flate2-1.0.24
@@ -77,16 +79,18 @@ CRATES="
 	ignore-0.4.18
 	indexmap-1.9.1
 	instant-0.1.12
+	io-lifetimes-0.7.3
 	itertools-0.10.3
 	itoa-1.0.3
 	jobserver-0.1.24
 	js-sys-0.3.59
 	kstring-2.0.0
 	lazy_static-1.4.0
-	libc-0.2.132
+	libc-0.2.133
 	libgit2-sys-0.13.4+1.4.2
 	libssh2-sys-0.2.23
 	libz-sys-1.1.8
+	linux-raw-sys-0.0.46
 	log-0.4.17
 	matches-0.1.9
 	memchr-2.5.0
@@ -125,6 +129,7 @@ CRATES="
 	remove_dir_all-0.5.3
 	ring-0.16.20
 	rustc-hash-1.1.0
+	rustix-0.35.11
 	rustls-0.20.6
 	ryu-1.0.11
 	same-file-1.0.6
@@ -152,9 +157,8 @@ CRATES="
 	tar-0.4.38
 	tempfile-3.3.0
 	termcolor-1.1.3
-	terminal_size-0.1.17
+	terminal_size-0.2.1
 	termtree-0.2.4
-	textwrap-0.15.0
 	thiserror-1.0.32
 	thiserror-impl-1.0.32
 	thread_local-1.1.4
