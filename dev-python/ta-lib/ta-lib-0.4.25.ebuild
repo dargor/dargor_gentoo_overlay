@@ -28,7 +28,6 @@ BDEPEND="
 
 S="${WORKDIR}/ta-lib-TA_Lib-${PV}/"
 
-python_prepare_all() {
+python_prepare() {
 	rm talib/_ta_lib.c || die
-	distutils-r1_python_prepare_all
 }
