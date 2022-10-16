@@ -6,7 +6,7 @@ inherit unpacker
 
 DESCRIPTION="Microsoft ODBC Driver 17 for SQL Server"
 HOMEPAGE="https://docs.microsoft.com/en-us/sql/connect/odbc"
-SRC_URI="https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/msodbcsql17_$(ver_rs 4 -)_amd64.deb"
+SRC_URI="https://packages.microsoft.com/debian/11/prod/pool/main/m/msodbcsql17/msodbcsql17_$(ver_rs 4 -)_amd64.deb"
 
 LICENSE="msodbcsql17"
 SLOT="17"

@@ -6,7 +6,7 @@ inherit unpacker wrapper
 
 DESCRIPTION="Microsoft SQL Server command-line tools"
 HOMEPAGE="https://docs.microsoft.com/en-us/sql/tools"
-SRC_URI="https://packages.microsoft.com/debian/10/prod/pool/main/m/mssql-tools/mssql-tools_$(ver_rs 4 -)_amd64.deb"
+SRC_URI="https://packages.microsoft.com/debian/11/prod/pool/main/m/mssql-tools/mssql-tools_$(ver_rs 4 -)_amd64.deb"
 
 LICENSE="mssql-tools"
 SLOT="0"
