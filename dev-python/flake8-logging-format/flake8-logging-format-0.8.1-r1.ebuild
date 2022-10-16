@@ -3,20 +3,20 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
-DESCRIPTION="A plugin for Flake8 finding likely bugs and design problems in your program"
-HOMEPAGE="https://github.com/PyCQA/flake8-bugbear"
+DESCRIPTION="Flake8 extension to validate (lack of) logging format strings"
+HOMEPAGE="https://github.com/globality-corp/flake8-logging-format"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
-	>=dev-python/attrs-19.2.0[${PYTHON_USEDEP}]
+	dev-python/flake8[${PYTHON_USEDEP}]
 "

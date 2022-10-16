@@ -3,12 +3,13 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit distutils-r1
 
-DESCRIPTION="Check for python builtins being used as variables or parameters"
-HOMEPAGE="https://github.com/gforcada/flake8-builtins"
+DESCRIPTION="Flake8 plugin that integrates isort"
+HOMEPAGE="https://github.com/gforcada/flake8-isort"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -17,5 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
+	dev-python/flake8[${PYTHON_USEDEP}]
+	dev-python/isort[${PYTHON_USEDEP}]
 "

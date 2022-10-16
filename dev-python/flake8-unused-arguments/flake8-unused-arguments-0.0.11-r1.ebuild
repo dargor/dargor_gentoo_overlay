@@ -3,12 +3,13 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
-DESCRIPTION="Jump-start into modern Python by forcing yourself to use f-strings"
-HOMEPAGE="https://github.com/MichaelKim0407/flake8-use-fstring"
+DESCRIPTION="Flake8 plugin to warn against unused arguments in functions"
+HOMEPAGE="https://github.com/nhoad/flake8-unused-arguments"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -17,5 +18,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/flake8-3.0.0[${PYTHON_USEDEP}]
+	dev-python/flake8[${PYTHON_USEDEP}]
 "

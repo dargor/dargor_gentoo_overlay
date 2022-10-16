@@ -3,12 +3,13 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
-DESCRIPTION="Find dead Python code"
-HOMEPAGE="https://github.com/jendrikseipp/vulture"
+DESCRIPTION="Flake8 extension to lint for quotes"
+HOMEPAGE="https://github.com/zheller/flake8-quotes"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -17,5 +18,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/toml[${PYTHON_USEDEP}]
+	dev-python/flake8[${PYTHON_USEDEP}]
 "

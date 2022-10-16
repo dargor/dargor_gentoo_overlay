@@ -3,6 +3,8 @@
 
 EAPI=8
 
+# does not work with DISTUTILS_USE_PEP517 for now, fails in eclass at
+#   rm "${reg_scriptdir}"/{"${EPYTHON}",python3,python,pyvenv.cfg} || die
 PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
 

@@ -3,6 +3,7 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
 
@@ -28,6 +29,7 @@ BDEPEND="
 
 S="${WORKDIR}/ta-lib-TA_Lib-${PV}/"
 
-python_prepare() {
+python_prepare_all() {
 	rm talib/_ta_lib.c || die
+	distutils-r1_python_prepare_all
 }

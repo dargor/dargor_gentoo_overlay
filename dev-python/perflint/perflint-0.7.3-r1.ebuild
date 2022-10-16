@@ -3,12 +3,13 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+DISTUTILS_USE_PEP517=flit
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit distutils-r1
 
-DESCRIPTION="Flake8 plugin for return expressions checking"
-HOMEPAGE="https://github.com/afonasev/flake8-return"
+DESCRIPTION="A linter for performance anti-patterns in Python"
+HOMEPAGE="https://github.com/tonybaloney/perflint"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -17,6 +18,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/flake8-3.2.1[${PYTHON_USEDEP}]
-	>=dev-python/flake8-plugin-utils-1.3.2[${PYTHON_USEDEP}]
+	dev-python/pylint[${PYTHON_USEDEP}]
 "
