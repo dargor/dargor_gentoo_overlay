@@ -6,6 +6,7 @@
     <email>linder.gabriel@gmail.com</email>
   </maintainer>
   <upstream>
-    <remote-id type="github">dargor/dargor_gentoo_overlay</remote-id>
+    <remote-id type="github">Delgan/loguru</remote-id>
+    <remote-id type="pypi">loguru</remote-id>
   </upstream>
 </pkgmetadata>
