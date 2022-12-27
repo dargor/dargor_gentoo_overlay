@@ -80,7 +80,7 @@ CRATES="
 	indexmap-1.9.1
 	instant-0.1.12
 	io-lifetimes-0.7.3
-	itertools-0.10.3
+	itertools-0.10.5
 	itoa-1.0.3
 	jobserver-0.1.24
 	js-sys-0.3.59
@@ -95,9 +95,11 @@ CRATES="
 	matches-0.1.9
 	memchr-2.5.0
 	memoffset-0.6.5
+	minimal-lexical-0.2.1
 	miniz_oxide-0.5.3
 	miow-0.3.7
 	native-tls-0.2.10
+	nom8-0.1.0
 	normalize-line-endings-0.3.0
 	num-traits-0.2.15
 	num_cpus-1.13.1
@@ -117,7 +119,7 @@ CRATES="
 	predicates-tree-1.0.5
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.43
+	proc-macro2-1.0.49
 	quote-1.0.21
 	rayon-1.5.3
 	rayon-core-1.9.3
@@ -139,8 +141,8 @@ CRATES="
 	security-framework-2.7.0
 	security-framework-sys-2.6.1
 	semver-1.0.13
-	serde-1.0.144
-	serde_derive-1.0.144
+	serde-1.0.151
+	serde_derive-1.0.151
 	serde_json-1.0.85
 	shell-escape-0.1.5
 	shlex-1.1.0
@@ -153,7 +155,7 @@ CRATES="
 	static_assertions-1.1.0
 	strsim-0.10.0
 	subprocess-0.2.9
-	syn-1.0.99
+	syn-1.0.107
 	tar-0.4.38
 	tempfile-3.3.0
 	termcolor-1.1.3
@@ -164,7 +166,9 @@ CRATES="
 	thread_local-1.1.4
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
+	toml_datetime-0.5.0
 	toml_edit-0.14.4
+	toml_edit-0.16.0
 	trycmd-0.13.6
 	unicode-bidi-0.3.8
 	unicode-ident-1.0.3
