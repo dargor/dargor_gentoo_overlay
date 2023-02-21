@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+S="${WORKDIR}/${P/-/_}"
+
 RDEPEND="
 	dev-python/astor[${PYTHON_USEDEP}]
 	dev-python/flake8[${PYTHON_USEDEP}]
