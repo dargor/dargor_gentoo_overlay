@@ -4,13 +4,13 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=poetry
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{8..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Base classes and utils for writing flake8 plugins"
 HOMEPAGE="https://github.com/afonasev/flake8-plugin-utils"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
