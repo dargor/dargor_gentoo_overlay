@@ -7,7 +7,7 @@ DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
 
-DESCRIPTION="Python REPL build on top of prompt_toolkit"
+DESCRIPTION="Python REPL build on top of prompt-toolkit"
 HOMEPAGE="https://github.com/prompt-toolkit/ptpython"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -25,8 +25,8 @@ RDEPEND="
 		dev-python/ipython[${PYTHON_USEDEP}]
 	)
 	>=dev-python/jedi-0.16.0[${PYTHON_USEDEP}]
-	>=dev-python/prompt_toolkit-3.0.18[${PYTHON_USEDEP}]
-	<dev-python/prompt_toolkit-3.1.0[${PYTHON_USEDEP}]
+	>=dev-python/prompt-toolkit-3.0.18[${PYTHON_USEDEP}]
+	<dev-python/prompt-toolkit-3.1.0[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 "
 
