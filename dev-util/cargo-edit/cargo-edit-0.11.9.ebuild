@@ -24,7 +24,7 @@ CRATES="
 	bytes-1.3.0
 	camino-1.1.2
 	cargo-platform-0.1.2
-	cargo_metadata-0.15.2
+	cargo_metadata-0.15.3
 	cc-1.0.78
 	cfg-if-1.0.0
 	clap-4.1.4
@@ -42,7 +42,7 @@ CRATES="
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.5
-	crates-index-0.19.0
+	crates-index-0.19.2
 	crc32fast-1.3.2
 	crossbeam-channel-0.5.6
 	crossbeam-deque-0.8.2
@@ -172,13 +172,13 @@ CRATES="
 	serde-1.0.152
 	serde_derive-1.0.152
 	serde_json-1.0.91
-	serde_spanned-0.6.0
+	serde_spanned-0.6.1
 	sha2-0.10.6
 	shell-escape-0.1.5
 	shlex-1.1.0
 	signature-1.6.4
 	similar-2.2.1
-	smartstring-1.0.1
+	smol_str-0.1.23
 	snapbox-0.4.4
 	snapbox-macros-0.3.1
 	socket2-0.4.7
@@ -204,11 +204,13 @@ CRATES="
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
 	toml-0.6.0
+	toml-0.7.1
 	toml_datetime-0.5.1
+	toml_datetime-0.6.1
 	toml_edit-0.15.0
-	toml_edit-0.17.1
 	toml_edit-0.18.0
-	trycmd-0.14.10
+	toml_edit-0.19.1
+	trycmd-0.14.11
 	typenum-1.16.0
 	unicode-bidi-0.3.10
 	unicode-ident-1.0.6
