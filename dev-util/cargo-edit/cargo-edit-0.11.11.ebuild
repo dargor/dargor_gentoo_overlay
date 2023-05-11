@@ -8,9 +8,15 @@ EAPI=8
 CRATES="
 	adler-1.0.2
 	aho-corasick-0.7.20
+	aho-corasick-1.0.1
+	anstream-0.3.2
+	anstyle-1.0.0
+	anstyle-parse-0.2.0
+	anstyle-query-1.0.0
+	anstyle-wincon-1.0.1
 	anyhow-1.0.68
-	assert_cmd-2.0.8
-	assert_fs-1.0.10
+	assert_cmd-2.0.11
+	assert_fs-1.0.13
 	atty-0.2.14
 	autocfg-1.1.0
 	base16ct-0.1.1
@@ -24,25 +30,25 @@ CRATES="
 	bytes-1.3.0
 	camino-1.1.2
 	cargo-platform-0.1.2
-	cargo_metadata-0.15.3
+	cargo_metadata-0.15.4
 	cc-1.0.78
 	cfg-if-1.0.0
-	clap-4.1.4
-	clap_derive-4.1.0
-	clap_lex-0.3.1
+	clap-4.2.7
+	clap_builder-4.2.7
+	clap_derive-4.2.0
+	clap_lex-0.4.1
+	colorchoice-1.0.0
 	combine-4.6.6
 	commoncrypto-0.2.0
 	commoncrypto-sys-0.2.0
-	concolor-0.0.11
 	concolor-control-0.0.7
 	concolor-query-0.0.4
-	concolor-query-0.1.0
 	const-oid-0.9.1
 	content_inspector-0.2.4
 	core-foundation-0.9.3
 	core-foundation-sys-0.8.3
 	cpufeatures-0.2.5
-	crates-index-0.19.2
+	crates-index-0.19.8
 	crc32fast-1.3.2
 	crossbeam-channel-0.5.6
 	crossbeam-deque-0.8.2
@@ -57,8 +63,6 @@ CRATES="
 	der-0.6.1
 	difflib-0.4.0
 	digest-0.10.6
-	dirs-next-2.0.0
-	dirs-sys-next-0.1.2
 	doc-comment-0.3.3
 	dunce-1.0.3
 	ecdsa-0.14.8
@@ -67,6 +71,7 @@ CRATES="
 	elliptic-curve-0.12.3
 	env_proxy-0.4.1
 	errno-0.2.8
+	errno-0.3.1
 	errno-dragonfly-0.1.2
 	fastrand-1.8.0
 	ff-0.12.1
@@ -89,11 +94,12 @@ CRATES="
 	heck-0.4.0
 	hermit-abi-0.1.19
 	hermit-abi-0.2.6
+	hermit-abi-0.3.1
 	hex-0.3.2
 	hex-0.4.3
 	hkdf-0.12.3
 	hmac-0.12.1
-	home-0.5.4
+	home-0.5.5
 	humantime-2.1.0
 	humantime-serde-1.1.1
 	idna-0.3.0
@@ -101,7 +107,7 @@ CRATES="
 	indexmap-1.9.2
 	instant-0.1.12
 	io-lifetimes-1.0.4
-	is-terminal-0.4.2
+	is-terminal-0.4.7
 	itertools-0.10.5
 	itoa-1.0.5
 	jobserver-0.1.25
@@ -113,13 +119,13 @@ CRATES="
 	libssh2-sys-0.2.23
 	libz-sys-1.1.8
 	linux-raw-sys-0.1.4
+	linux-raw-sys-0.3.7
 	log-0.4.17
 	memchr-2.5.0
 	memoffset-0.7.1
 	miniz_oxide-0.6.2
 	miow-0.5.0
 	native-tls-0.2.11
-	nom8-0.2.0
 	normalize-line-endings-0.3.0
 	num-traits-0.2.15
 	num_cpus-1.15.0
@@ -131,7 +137,6 @@ CRATES="
 	openssl-sys-0.9.80
 	orion-0.17.3
 	os_pipe-1.1.2
-	os_str_bytes-6.4.1
 	p384-0.11.2
 	pasetors-0.6.5
 	pathdiff-0.2.1
@@ -139,26 +144,24 @@ CRATES="
 	percent-encoding-2.2.0
 	pkcs8-0.9.0
 	pkg-config-0.3.26
-	predicates-2.1.5
-	predicates-core-1.0.5
+	predicates-3.0.3
+	predicates-core-1.0.6
 	predicates-tree-1.0.7
-	proc-macro-error-1.0.4
-	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.50
-	quote-1.0.23
+	proc-macro2-1.0.56
+	quote-1.0.27
 	rand_core-0.6.4
-	rayon-1.6.1
-	rayon-core-1.10.2
+	rayon-1.7.0
+	rayon-core-1.11.0
 	redox_syscall-0.2.16
-	redox_users-0.4.3
-	regex-1.7.1
+	regex-1.8.1
 	regex-automata-0.1.10
-	regex-syntax-0.6.28
+	regex-syntax-0.7.1
 	remove_dir_all-0.5.3
 	rfc6979-0.3.1
 	ring-0.16.20
 	rustc-hash-1.1.0
 	rustix-0.36.7
+	rustix-0.37.3
 	rustls-0.20.8
 	ryu-1.0.12
 	same-file-1.0.6
@@ -168,19 +171,19 @@ CRATES="
 	sec1-0.3.0
 	security-framework-2.8.1
 	security-framework-sys-2.8.0
-	semver-1.0.16
-	serde-1.0.152
-	serde_derive-1.0.152
-	serde_json-1.0.91
+	semver-1.0.17
+	serde-1.0.163
+	serde_derive-1.0.163
+	serde_json-1.0.96
 	serde_spanned-0.6.1
 	sha2-0.10.6
 	shell-escape-0.1.5
 	shlex-1.1.0
 	signature-1.6.4
 	similar-2.2.1
-	smol_str-0.1.23
-	snapbox-0.4.4
-	snapbox-macros-0.3.1
+	smol_str-0.2.0
+	snapbox-0.4.11
+	snapbox-macros-0.3.4
 	socket2-0.4.7
 	socks-0.3.4
 	spin-0.5.2
@@ -190,6 +193,7 @@ CRATES="
 	subprocess-0.2.9
 	subtle-2.4.1
 	syn-1.0.107
+	syn-2.0.15
 	tar-0.4.38
 	tempfile-3.3.0
 	termcolor-1.2.0
@@ -203,14 +207,12 @@ CRATES="
 	time-macros-0.2.6
 	tinyvec-1.6.0
 	tinyvec_macros-0.1.0
-	toml-0.6.0
-	toml-0.7.1
+	toml-0.7.3
 	toml_datetime-0.5.1
 	toml_datetime-0.6.1
 	toml_edit-0.15.0
-	toml_edit-0.18.0
-	toml_edit-0.19.1
-	trycmd-0.14.11
+	toml_edit-0.19.8
+	trycmd-0.14.16
 	typenum-1.16.0
 	unicode-bidi-0.3.10
 	unicode-ident-1.0.6
@@ -218,6 +220,7 @@ CRATES="
 	untrusted-0.7.1
 	ureq-2.6.2
 	url-2.3.1
+	utf8parse-0.2.1
 	vcpkg-0.2.15
 	version_check-0.9.4
 	wait-timeout-0.2.0
@@ -236,14 +239,25 @@ CRATES="
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	windows-sys-0.42.0
-	windows_aarch64_gnullvm-0.42.1
-	windows_aarch64_msvc-0.42.1
-	windows_i686_gnu-0.42.1
-	windows_i686_msvc-0.42.1
-	windows_x86_64_gnu-0.42.1
-	windows_x86_64_gnullvm-0.42.1
-	windows_x86_64_msvc-0.42.1
-	yansi-0.5.1
+	windows-sys-0.45.0
+	windows-sys-0.48.0
+	windows-targets-0.42.2
+	windows-targets-0.48.0
+	windows_aarch64_gnullvm-0.42.2
+	windows_aarch64_gnullvm-0.48.0
+	windows_aarch64_msvc-0.42.2
+	windows_aarch64_msvc-0.48.0
+	windows_i686_gnu-0.42.2
+	windows_i686_gnu-0.48.0
+	windows_i686_msvc-0.42.2
+	windows_i686_msvc-0.48.0
+	windows_x86_64_gnu-0.42.2
+	windows_x86_64_gnu-0.48.0
+	windows_x86_64_gnullvm-0.42.2
+	windows_x86_64_gnullvm-0.48.0
+	windows_x86_64_msvc-0.42.2
+	windows_x86_64_msvc-0.48.0
+	winnow-0.4.6
 	zeroize-1.5.7
 "
 
@@ -256,7 +270,7 @@ SRC_URI="
 	$(cargo_crate_uris)
 "
 
-LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-1 Boost-1.0 CC0-1.0 ISC MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
