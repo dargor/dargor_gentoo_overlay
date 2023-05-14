@@ -27,7 +27,7 @@ BDEPEND="
 	dev-python/cython[${PYTHON_USEDEP}]
 "
 
-S="${WORKDIR}/ta-lib-TA_Lib-${PV}/"
+S="${WORKDIR}/ta-lib-python-TA_Lib-${PV}/"
 
 python_prepare_all() {
 	rm talib/_ta_lib.c || die
