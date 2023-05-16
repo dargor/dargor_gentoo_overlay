@@ -1,0 +1,2 @@
+# Allow to use versions from this overlay
+>=dev-python/toml-0.10.2-r1
