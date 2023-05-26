@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Dargor's most common routines"
 HOMEPAGE="https://github.com/dargor/dargor-py"
-SRC_URI="https://github.com/dargor/${PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
+SRC_URI="https://github.com/dargor/dargor-py/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
@@ -23,3 +23,5 @@ RDEPEND="
 	dev-python/pygments[${PYTHON_USEDEP}]
 	sys-apps/util-linux
 "
+
+S="${WORKDIR}/dargor-py-${PV}/"
