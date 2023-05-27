@@ -215,11 +215,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "If firefox-bin is being used, then it's path has to be specified"
-	ewarn "inside the Python Script:"
+	ewarn "If firefox-bin is being used, its path has to be specified"
+	ewarn "inside your Python script:"
 	ewarn ""
 	ewarn "from selenium.webdriver.firefox.firefox_binary import FirefoxBinary"
 	ewarn "firefox_binary = FirefoxBinary('/usr/bin/firefox-bin')"
 	ewarn "webdriver.Firefox(firefox_binary=firefox_binary)"
 }
-
